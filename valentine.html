@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine</title>
+
+<style>
+  body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+	background: pink;
+	color: white;
+	text-shadow: 2px 2px 2px #000000;   
+  }
+
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+	background-color: rgb(255, 102, 153);
+	color: white;
+  }
+
+  #noBtn {
+    position: absolute;
+    top: 60%;
+    left: 55%;
+  }
+</style>
+</head>
+
+<body>
+
+<h2>Baby will you be my Valentine? ❤️</h2>
+
+<button onclick="alert('Znaah bebcee lyyyyy 😊')">Yes</button>
+<button id="noBtn">No</button>
+
+<script>
+  const noBtn = document.getElementById("noBtn");
+
+  noBtn.addEventListener("mouseenter", () => {
+    const maxX = window.innerWidth - noBtn.offsetWidth;
+    const maxY = window.innerHeight - noBtn.offsetHeight;
+
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  });
+</script>
+
+</body>
+</html>
